@@ -1,0 +1,57 @@
+/* STARTHREAD pages on articom.no (extends /assets/site.css). */
+.st-hero {
+  background:
+    radial-gradient(60% 50% at 18% 20%, rgba(94, 242, 255, 0.22), transparent 70%),
+    radial-gradient(55% 45% at 85% 70%, rgba(255, 79, 216, 0.2), transparent 70%),
+    linear-gradient(180deg, #0b0624 0%, #05030f 70%, #050716 100%);
+}
+
+.st-icon {
+  width: 112px;
+  height: 112px;
+  border-radius: 26px;
+  box-shadow: 0 0 40px rgba(94, 242, 255, 0.35);
+}
+
+.st-logo {
+  margin: 0.6rem 0 0;
+  font-weight: 900;
+  font-size: clamp(2.6rem, 9vw, 4.6rem);
+  line-height: 1;
+  letter-spacing: 0.04em;
+  background: linear-gradient(100deg, #ffffff 0%, #5ef2ff 35%, #b28bff 65%, #ff4fd8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.st-soon {
+  display: inline-block;
+  padding: 0.55rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: #dce8ff;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.st-shots {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.6rem, 2vw, 1.2rem);
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 3rem) 3rem;
+}
+
+.st-shots img {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+}
+
+@media (max-width: 720px) {
+  .st-shots {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

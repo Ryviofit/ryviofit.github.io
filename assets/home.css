@@ -1,0 +1,144 @@
+/* Articom front page: pick a game. Extends site.css. */
+.home-hero {
+  position: relative;
+  padding: 9rem clamp(1rem, 4vw, 3rem) 2.5rem;
+  text-align: center;
+  background:
+    radial-gradient(50% 60% at 25% 0%, rgba(66, 232, 255, 0.16), transparent 70%),
+    radial-gradient(45% 55% at 80% 10%, rgba(255, 63, 206, 0.14), transparent 70%);
+}
+
+.home-hero h1 {
+  margin: 0.6rem 0 0.8rem;
+  font-size: clamp(2.6rem, 8vw, 4.8rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.16em;
+}
+
+.games {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2.5vw, 1.6rem);
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 1rem clamp(1rem, 4vw, 3rem) 5rem;
+}
+
+.game-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 460px;
+  padding: 2rem;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  color: var(--ink);
+  text-decoration: none;
+  isolation: isolate;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.game-card:hover,
+.game-card:focus-visible {
+  transform: translateY(-4px);
+  border-color: rgba(66, 232, 255, 0.7);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45), 0 0 40px rgba(66, 232, 255, 0.18);
+}
+
+.game-card .bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.game-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(5, 7, 22, 0.05) 25%, rgba(5, 7, 22, 0.92) 78%);
+}
+
+.game-card .mark {
+  width: min(360px, 88%);
+  margin-bottom: 0.6rem;
+  filter: drop-shadow(0 0 18px rgba(31, 213, 255, 0.3));
+}
+
+.game-card .st-name {
+  margin: 0 0 0.4rem;
+  font-size: clamp(2rem, 4.6vw, 3rem);
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  background: linear-gradient(100deg, #ffffff 0%, #5ef2ff 35%, #b28bff 65%, #ff4fd8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.game-card p {
+  margin: 0 0 1.2rem;
+  color: #d8e5ff;
+  font-size: 1.05rem;
+}
+
+.game-card .meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.game-card .meta span {
+  padding: 0.35rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(5, 7, 22, 0.6);
+  color: #dce8ff;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.game-card .meta .live {
+  border-color: rgba(66, 232, 255, 0.7);
+  color: #041019;
+  background: linear-gradient(135deg, rgba(66, 232, 255, 0.96), rgba(116, 255, 211, 0.96));
+}
+
+.game-card .go {
+  position: absolute;
+  top: 1.4rem;
+  right: 1.4rem;
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  color: #fff;
+  opacity: 0.85;
+}
+
+@media (max-width: 760px) {
+  .games {
+    grid-template-columns: 1fr;
+  }
+  .game-card {
+    min-height: 380px;
+  }
+}
+
+/* site.css hides the first nav link on phones (it's "Game" on game pages); keep both games here. */
+@media (max-width: 760px) {
+  .home-nav a:first-child {
+    display: inline;
+  }
+}
+
+.game-card .st-bg {
+  object-position: 50% 58%;
+  background: #05030f;
+}
