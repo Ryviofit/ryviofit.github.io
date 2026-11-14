@@ -35,6 +35,10 @@
   font-weight: 700;
 }
 
+.st-hero .platforms .play-link {
+  border-radius: 999px;
+}
+
 .st-shots {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
