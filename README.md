@@ -7,6 +7,7 @@ Official public information, privacy, terms and support pages for Articom's game
 | `/` | Game picker |
 | `/pulserun/` · `/privacy/` · `/terms/` · `/support/` | PULSE//RUN (legal pages keep their original URLs: the published app links to them) |
 | `/starthread/` · `/starthread/privacy/` · `/starthread/terms/` · `/starthread/support/` | STARTHREAD |
+| `/glimmerlund/` · `/glimmerlund/privacy/` · `/glimmerlund/terms/` · `/glimmerlund/support/` | Glimmerlund |
 | `/app-ads.txt` | AdMob authorised sellers (covers all games) |
 
 Published at [articom.no](https://articom.no/). The games' source code and

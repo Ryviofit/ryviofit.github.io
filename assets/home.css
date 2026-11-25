@@ -63,7 +63,7 @@
 
 .games {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(1rem, 2.5vw, 1.6rem);
   max-width: 1180px;
   margin: 0 auto;
@@ -186,4 +186,42 @@
 .game-card .st-bg {
   object-position: 50% 58%;
   background: #05030f;
+}
+
+/* Three games: three columns on wide screens, two (last card full width) on tablets, one on phones. */
+@media (max-width: 1060px) and (min-width: 761px) {
+  .games {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .games .game-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+
+.game-card .gl-name {
+  margin: 0 0 0.4rem;
+  font-size: clamp(2rem, 4.2vw, 2.8rem);
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  background: linear-gradient(100deg, #fff6d6 0%, #ffd666 35%, #ff9ec7 70%, #c79bff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.game-card .gl-bg {
+  object-position: 50% 40%;
+  background: #071a22;
+}
+
+/* Three cards side by side: smaller names so STARTHREAD and Glimmerlund fit the card width. */
+@media (min-width: 1061px) {
+  .game-card {
+    padding: 1.6rem;
+  }
+  .game-card .st-name,
+  .game-card .gl-name {
+    font-size: clamp(1.6rem, 2.4vw, 2.25rem);
+  }
 }

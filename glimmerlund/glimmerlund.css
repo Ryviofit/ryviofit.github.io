@@ -1,0 +1,57 @@
+/* GLIMMERLUND pages on articom.no (extends /assets/site.css). */
+.gl-hero {
+  background:
+    radial-gradient(60% 50% at 20% 18%, rgba(255, 214, 102, 0.22), transparent 70%),
+    radial-gradient(55% 45% at 85% 72%, rgba(255, 92, 170, 0.2), transparent 70%),
+    linear-gradient(180deg, #0c2a33 0%, #071a22 70%, #050716 100%);
+}
+
+.gl-icon {
+  width: 112px;
+  height: 112px;
+  border-radius: 26px;
+  box-shadow: 0 0 40px rgba(255, 214, 102, 0.35);
+}
+
+.gl-logo {
+  margin: 0.6rem 0 0;
+  font-weight: 900;
+  font-size: clamp(2.6rem, 9vw, 4.6rem);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  background: linear-gradient(100deg, #fff6d6 0%, #ffd666 35%, #ff9ec7 70%, #c79bff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gl-soon {
+  display: inline-block;
+  padding: 0.55rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: #dce8ff;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.gl-shots {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.6rem, 2vw, 1.2rem);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 3rem) 3rem;
+}
+
+.gl-shots img {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+}
+
+@media (max-width: 720px) {
+  .gl-shots {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
